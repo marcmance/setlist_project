@@ -1,0 +1,151 @@
+body {
+	background: #DAE0E3;
+	font-family: Helvetica;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	_border: 1px solid #000000;
+	background: #BFD6E3;
+	color: #000000;
+	margin: 5px;
+	padding: 5px;
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: strong;
+	width: 300px;
+}
+
+li.encore {
+background: #FAA49D;
+}
+
+li.encore_line{
+	background: #FAA49D;
+	padding: 2px;
+}
+
+.song_notes{
+	font-size: 10px;
+}
+
+/*********
+VIEW SETLIST MENU
+********/
+
+#view_setlist_menu  div {
+	border: 1px solid #688C96;
+	padding: 10px;
+	border-radius: 4px;
+	background: #BFD6E3;
+	width: 70px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#view_setlist_menu  div:hover {
+	background: #FFEDC4;
+}
+
+/****************
+artistSetlists.php
+***************/
+
+#artist_setlists {
+	font-size: 20px;
+	color: #688C96;
+}
+
+#artist_setlists a{
+	color: #688C96;
+	text-decoration:none;
+}
+#artist_setlists a:visited{
+	color: #688C96;
+	text-decoration:none;
+}
+#artist_setlists a:hover{
+	color: #FFEDC4;
+	text-decoration:none;
+}
+
+/********************
+viewArtist.php
+****************/
+#artist_header {
+	font-size: 40px;
+}
+
+/****** 
+TABLE
+*******/
+
+#setlistTd {
+	width: 300px;
+	border-right: 1px solid #688C96;
+	padding-right: 10px;
+}
+
+#statsTd {
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+/***
+viewSetlist.php
+***/
+#statsTable td.rightCol{
+	padding-left: 10px;
+	height: 85px;
+	font-size: 20px;
+	font-weight: strong;
+}
+
+#artist_header{
+	font-size: 24px;
+	font-weight: strong;
+}
+#date_header,#venue_header {
+	font-size: 18px;
+}
+
+.number_container {
+	border: 1px solid #688C96;
+	padding: 10px;
+	border-radius: 4px;
+	width:60px;
+	background: #BFD6E3;
+}
+.numbers{
+	font-size: 48px;
+	text-align: center;
+	_border: 1px solid #688C96;
+}
+
+.number_container:before {
+	opacity: 0.6;
+}
+.numbers_album{
+	font-size: 48px;
+	text-align: center;
+	text-shadow: -2px 0 688C96, 0 2px 688C96, 2px 0 688C96, 0 -2px 688C96;
+	_border: 1px solid #688C96;
+}
+
+
+.number_container_small {
+	border: 1px solid #688C96;
+	padding: 10px;
+	border-radius: 4px;
+	width:24px;
+	background: #BFD6E3;
+}
+.numbers_small{
+	font-size: 20px;
+	text-align: center;
+	_border: 1px solid #688C96;
+}

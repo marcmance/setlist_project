@@ -1,0 +1,197 @@
+body {
+	background: #DAE0E3;
+}
+
+/******
+	General stuff
+********/
+ul{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	border: 1px solid #000000;
+	background: #BFD6E3;
+	color: #000000;
+	margin: 5px;
+	padding: 5px;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+.errors {
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #FAA49D;
+}
+
+.button_link {
+	padding: 5px 7px;
+    background: #688C96;
+    color: #FFF;
+	border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	text-decoration: none;
+	transition-duration: 0.2s;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+.button_link:hover, .button_link:focus {
+    background: #56727A;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+
+.button-link:active {
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #475F66;
+    border: solid 1px #203E5F;
+}
+
+/********************
+	SELECT LISTS
+********************/
+
+#artistSelect,#venueSelect,#dateSelect {
+	border-radius: 10px;
+	font-size: 20px;
+	font-family: Helvetica;
+	color: #2A5E73;
+	overflow:hidden;
+}
+
+
+
+/*************************
+	Main Table
+**************************/
+#mainTable {
+	font-family: Helvetica;
+}
+
+#mainTable td {
+	vertical-align: top;
+}
+
+/* 
+	select songs 
+*/
+
+#select_songs_td {
+	border: 1px solid #B6B7BA; 
+	background:#EDEDED;
+	width: 400px;
+	height: 50px;
+}
+#spinner {
+	position: fixed;
+	z-index: 1000;
+	top: center;
+	left: center;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+#albumDiv {
+	
+}
+
+/*
+	Setlist td
+*/
+#setlist_td {
+	background: #C0C3C4;
+	border: 1px solid #B6B7BA; 
+	width: 300px;
+}
+#setlistDiv {
+	
+}
+
+/*
+	Song Info
+*/
+#songInfoDiv  {
+
+}
+
+/***************************
+	Select Album/song table
+***************************/
+
+#album_song_table {
+	width: 400px;
+}
+ 
+#album_td{
+	background: #EDEDED;
+	width: 100px;
+}
+
+.album_title {
+	font-size: 20px;
+	color: #000000;
+}
+
+#arrow_td{
+	background: #EDEDED;
+	width: 10px;
+}
+
+.arrow-left {
+	border-color: transparent #688C96;
+	border-style: solid;
+	border-width: 18px 18px 18px 0px;
+	height: 0px;
+	width: 0px;				
+}
+
+.arrow_container {
+	border-color: #ffffff;
+	border-style: solid;
+	border-width: 0px 0px 0px 0px;
+	height: 50px;
+	width: 10px;
+	padding: 25px 0px 25px 0px
+}
+
+#song_td{
+	background: #688C96;
+}
+
+
+/*************************
+	SETLIST
+*************************/
+
+.encore_line{
+	background: #FAA49D;
+	padding: 2px;
+}
+
+td .main_setlist_li_extra{
+	padding-left: 10px;
+}
+
+a.deleteFromUL:link {
+	color: #000000;
+}
+a.deleteFromUL:visited {color:#000000;}
+
+	
+img .album_art_hide{
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+}
+
+.opacity {
+	opacity: 0;
+}   
+
+img.opacity:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}

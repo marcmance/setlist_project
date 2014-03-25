@@ -1,0 +1,5 @@
+GETIT /offer/1/buy HTTP/1.1
+Host: asdfasd
+Agent: hello
+
+amount=100

@@ -1,0 +1,419 @@
+/*********************
+ 1. GENERAL ITEMS
+**********************/
+
+/*@import url(http://fonts.googleapis.com/css?family=Orienta);*/
+
+@font-face {
+  font-family: 'Orienta';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Orienta'), local('Orienta-Regular'), url(library/fonts/nPJ0J30J_zQZtBhztPPbaA.woff) format('woff');
+}
+
+body {
+	background: #DAE0E3;
+	font-family: Helvetica;
+}
+
+a{
+	color: #688C96;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #688C96;
+	text-decoration: none;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	_border: 1px solid #000000;
+	background: #BFD6E3;
+	color: #000000;
+	margin: 5px;
+	padding: 5px;
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: strong;
+	width: 300px;
+}
+
+li.encore {
+	background: #FAA49D;
+}
+
+li.encore_line{
+	background: #FAA49D;
+	padding: 2px;
+}
+
+li.selected{
+	background: #FFEDC4;
+}
+
+li.opacityDimmed {
+	opacity: 0.1;
+}
+
+
+#mainContainer {
+	_text-align: center;
+	width: 100%;
+	_border: 1px solid red;
+}
+
+#pageContainer {
+	_text-align:center;
+	max-width: 960px;
+	border: 1px solid #688C96;
+	border-radius: 2px;
+	margin: 0 auto;
+	_background-color: #EDEDED;
+}
+
+input {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	color: #688C96;
+	padding: 2%;
+}
+
+.errorMessage {
+	text-align: center;
+	_width: 100%;
+	_margin: 10%;
+	background-color: #F7C6C6;
+	border: 1px solid #F59595;
+	color: #E01B1B;
+	font-size: 14px;
+	padding: 2% 2%;
+	border-radius: 6px;
+	font-weight: strong;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/*
+	INFO BOX
+*/
+.infoBox {
+	width: 100%;
+	border: 1px solid #688C96;
+	font-family: 'Orienta', sans-serif;
+}
+
+.infoBoxHeader {
+	background-color: #CAD3D9;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 18px;
+	border-bottom: 1px solid #688C96;
+}
+
+.infoBoxImage {
+	height: 100px;
+	border-bottom: 1px solid #688C96;
+	background-position: left top;
+    background-attachment: scroll;
+    background-size: 100%;
+    position:relative;
+  
+}
+
+.infoNumberContainer {
+	_background-color: #688C96;
+	background-color: rgba(255,255,255,0.6);
+	position: absolute;
+	bottom:0;
+  	left:0;	
+}
+
+.infoNumber {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.infoBoxFooter {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*****************
+	LOGIN PAGE
+	/login/
+*****************/
+
+#loginBoxContainer {
+	text-align:center;
+	width: 100%;
+	_border: 1px solid blue;
+	margin: 0 auto;
+}
+
+#loginBox {
+	margin: 5% 30%;
+	padding: 1% 5%;
+	width: 30%;
+	font-family: Helvetica;
+	font-size: 20px;
+	text-align: left;
+	background: #EDEDED;
+	border: 1px solid #B6B7BA;
+	border-radius: 24px;
+}
+
+.button_link {
+	padding: 5px 7px;
+    background: #688C96;
+    color: #FFF;
+	border-radius: 6px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	text-decoration: none;
+	transition-duration: 0.2s;
+	font-family: Helvetica;
+	font-size: 24px; 
+}
+
+/********************
+	USER PROFILE
+	/user/[id]
+*********************/
+
+#page-user-profile {
+	background-color: #EDEDED;
+}
+
+
+.userProfileStats {
+	border: 1px solid #688C96;
+	width: 100%;
+	_margin-left: 2%;
+}
+
+.userProfileStats td{
+	_border: 1px solid black;
+	_margin-left: 2%;
+}
+
+.numberStatsTR {
+	font-size: 30px;
+	color: #688C96;
+}
+
+.numberStatsTR td {
+	_margin: 0 5%;
+}
+
+.border-right td{
+	border-right: 1px solid #688C96;
+}
+
+.numberStatsTR .setlistCountTd {
+	_padding-left: 2%;	
+}
+
+.nameStatsTR {
+	_text-align: center;
+	font-size: 12px;
+}
+
+.profileMenu {
+	float: left;
+	width:230px;
+	padding-right: 2%;
+	padding-left: 1%;
+	border-right: 1px solid #688C96;
+}
+
+.profileHeader {
+	font-size: 30px;
+	font-weight: strong;
+	background-color: #CAD3D9;
+	font-family: 'Orienta', sans-serif;
+	border-bottom: 1px solid #688C96;
+}
+
+.setlistListContainer {
+	margin-left: 30%;
+	margin-right: 10%;
+	max-width: 100%;
+	_border: 1px black solid;
+}
+
+.setlistContainerListView {
+	_border-top: 1px solid black;
+	border-bottom: 1px solid #688C96;
+	height: 100px;
+	_width: 760px;
+	_position: relative;
+	_margin-left: 25%;
+	_margin-right: 10%;
+	_background-color: black;
+}
+
+.setlistDate {
+	border:1px solid #688C96;
+	width: 10%;
+	float: left;
+	background-color: #B4C7D4;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.setlistInfo {
+	_border:1px solid blue;
+	width: 80%;
+	float: right;
+	margin-top: 3%;
+	margin-bottom: 1%;
+	
+}
+
+.setlistMonth {
+	font-weight: bold;
+	font-size: 24px;
+	_color: #FFEDC4;
+}
+
+.setlistDay {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.setlistYear {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.setlistArtist {
+	color: #688C96;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.setlistArtist  a{
+	color: #688C96;
+	text-decoration: none;
+}
+
+.setlistArtist  a:visited{
+	color: #688C96;
+	text-decoration: none;
+}
+
+.setlistVenue {
+	font-size: 16px;
+}
+
+/********************
+	EDI USER PROFILE
+	/user/edit
+*********************/
+
+.gen-page-container {
+	background-color: #EDEDED;
+}
+
+#page-user-edit {
+	
+}
+
+
+/********************
+	SETLIST
+	/setlist/[id]
+
+*********************/
+#page-setlist-index .setlistVenue{
+	font-style: italic;
+}
+
+.userSetlistStats {
+	border-top: 1px solid #688C96;
+	border-bottom: 1px solid #688C96;
+	margin-right: 4%;
+	margin-left: 4%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.song_notes{
+	font-size: 10px;
+}
+
+#setlistTd {
+	width: 300px;
+	border-right: 1px solid #688C96;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+#statsTd {
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+#statsTable td.rightCol{
+	padding-left: 10px;
+	height: 85px;
+	font-size: 20px;
+	font-weight: strong;
+}
+
+#artist_header{
+	font-size: 24px;
+	font-weight: strong;
+}
+#date_header,#venue_header {
+	font-size: 18px;
+}
+
+.number_container {
+	border: 1px solid #688C96;
+	padding: 10px;
+	border-radius: 4px;
+	width:60px;
+	background: #BFD6E3;
+}
+.numbers{
+	font-size: 48px;
+	text-align: center;
+	_border: 1px solid #688C96;
+}
+
+.number_container:before {
+	opacity: 0.6;
+}
+.numbers_album{
+	font-size: 48px;
+	text-align: center;
+	text-shadow: -2px 0 688C96, 0 2px 688C96, 2px 0 688C96, 0 -2px 688C96;
+	_border: 1px solid #688C96;
+}
+
+
+.number_container_small {
+	border: 1px solid #688C96;
+	padding: 10px;
+	border-radius: 4px;
+	width:24px;
+	background: #BFD6E3;
+}
+.numbers_small{
+	font-size: 20px;
+	text-align: center;
+	_border: 1px solid #688C96;
+}

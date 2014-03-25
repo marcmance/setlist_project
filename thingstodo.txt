@@ -1,0 +1,11 @@
+setlists to uplaod
+
+STD
+- solo shows
+
+FOB
+
+----
+Update Stats queries to exclude setlists from the same venue/date.
+Handle Bamboozle
+Add Setlist 
