@@ -115,6 +115,25 @@
 			$this->join_array[$table] = $select_fields;
 			return $this;
 		}
+
+		protected function _join() {
+			$new_join_array = array("","");
+			if(!empty($this->join_array)) {
+				$c = 1;
+				foreach($this->join_array as $table => $select_fields) {
+					if(!empty($select_fields)) {
+						$new_join_array[1].= implode(",",$select_fields);
+						if($c != count($this->join_array)) {
+							$new_join_array[1].= ",";
+						}						
+					}
+					$new_join_array[0] .= "JOIN " . $table . " ON " . $table . "." . $table ."_id = " . $this->table_name . "." . $table . "_id ";
+					$c++;
+				}
+			}
+			$this->join_array = array(); //reset join
+			return $new_join_array;
+		}	
 		
 		public function where($field, $param, $operator = "=") {
 			if(in_array($field, $this->fields_array)) {
@@ -143,7 +162,7 @@
 					}
 				}
 			}
-			$this->where_array = array(); //reset join
+			$this->where_array = array(); //reset where
 			
 			return $new_where_array;
 		}
@@ -188,26 +207,7 @@
 		protected function appendTableName($field) {
 			return $this->table_name . "." . $field;
 		}
-		
-		protected function _join() {
-			$new_join_array = array("","");
-			if(!empty($this->join_array)) {
-				$c = 1;
-				foreach($this->join_array as $table => $select_fields) {
-					if(!empty($select_fields)) {
-						$new_join_array[1].= implode(",",$select_fields);
-						if($c != count($this->join_array)) {
-							$new_join_array[1].= ",";
-						}						
-					}
-					$new_join_array[0] .= "JOIN " . $table . " ON " . $table . "." . $table ."_id = " . $this->table_name . "." . $table . "_id ";
-					$c++;
-				}
-			}
-			$this->join_array = array(); //reset join
-			return $new_join_array;
-		}		
-		
+				
 		//dynamic function bind params
 		protected function bind_params($params) {
 			$binded_params = array('');                       
