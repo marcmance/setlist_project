@@ -54,7 +54,7 @@
 		echo "<ul>";
 		//loop through each song
 		foreach ($songArr[$row{'album_id'}] as $k => $s) {
-			echo '<li class="albumItem" id="' .$k . '"> <b>'.$s.'</b></li>';
+			echo '<li data-album-id="'. $row{'album_id'} . '" class="albumItem" id="' .$k . '"> <b>'.$s.'</b></li>';
 		}
 		echo '</ul>';
 		echo '</div>';

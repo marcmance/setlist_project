@@ -28,7 +28,7 @@
 		$stmt->execute();
 		$insert_id = $stmt->insert_id;
 		$stmt->close();
-		if($setlist_song_stmt = $mysqli->prepare("INSERT INTO setlist_song (setlist_id,song_id,notes,encore,setlist_order,opener,closer,created_date,updated_date) VALUES (?, ?, ?, ?, ?, ?, ?,now(),now())")) {
+		if($setlist_song_stmt = $mysqli->prepare("INSERT INTO setlist_song (setlist_id,song_id,notes,encore,setlist_order,opener,closer,album_id,created_date,updated_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, now(),now())")) {
 			$setlist_order = 1;
 			$opener = 1;
 			$closer = 0;
@@ -45,7 +45,7 @@
 				if($setlist_order == count($posted_data)) {
 					$closer = 1;
 				}
-				$setlist_song_stmt->bind_param("iisiiii", $insert_id, $s['id'], strip_tags($s['description']), $e, $setlist_order,$opener,$closer);
+				$setlist_song_stmt->bind_param("iisiiiii", $insert_id, $s['id'], strip_tags($s['description']), $e, $setlist_order,$opener,$closer,$s['album_id']);
 				$setlist_song_stmt->execute();
 				echo $setlist_song_stmt->error;
 				$setlist_order++;

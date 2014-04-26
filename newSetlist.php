@@ -32,7 +32,7 @@ include 'connection.php';
 				else {
 					selectedList[liID] = true;
 					$(this).css("background",selectedColor);
-					var listItem = "<li id=\"m-" + liID + "\" class=\"mainSetlistItem\">";
+					var listItem = "<li data-album-id=\"" + $(this).attr("data-album-id") + "\" id=\"m-" + liID + "\" class=\"mainSetlistItem\">";
 					listItem += "<table border=\"0\" width=\"100%\">";
 					listItem += "<tr><td class=\"li_song_name\"><b>" + $(this).text() + "</b></td>"
 					listItem += "<td align=\"right\" width=\"65\">";
@@ -164,17 +164,17 @@ include 'connection.php';
 						var liID = parseId($(this).attr("id"));
 						var encore = "false";
 						var description = $("#song_notes_"+liID).val();
+						var album_id = $(this).attr("data-album-id");
+
 						if(description == null || description == "") {
 							description = "";
 						}
-						else {
-							
-						}
+						
 						if($(this).hasClass("encore")) {
 							encore = "true";
 						}
 					
-						var arr = new song(liID, encore, description);
+						var arr = new song(liID, encore, description, album_id);
 						songArray.push(arr);
 						
 						//hiddenInputs += '<input type="hidden" name="songs[]" value="'+liID+'"/>';
@@ -190,10 +190,11 @@ include 'connection.php';
 			/******************
 				START FUNCTIONS
 			********************/
-			function song(id, encore, description) {
+			function song(id, encore, description, album_id) {
 				this.id = id;
 				this.encore = encore;
 				this.description = description;
+				this.album_id = album_id;
 			}
 			
 			function setLiToEncore() {
